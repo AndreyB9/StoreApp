@@ -17,6 +17,7 @@
 		623A040E28C6983F00816000 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623A040D28C6983F00816000 /* BaseTabBarController.swift */; };
 		623AA1B128C933AF00D5FA46 /* AppSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623AA1B028C933AF00D5FA46 /* AppSearchController.swift */; };
 		62536FF428D5F5A90098E39C /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62536FF328D5F5A90098E39C /* VerticalStackView.swift */; };
+		62536FF728D717660098E39C /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62536FF628D717660098E39C /* SearchResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		623A040D28C6983F00816000 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		623AA1B028C933AF00D5FA46 /* AppSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSearchController.swift; sourceTree = "<group>"; };
 		62536FF328D5F5A90098E39C /* VerticalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
+		62536FF628D717660098E39C /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		623A03F828C697AC00816000 /* StoreApp */ = {
 			isa = PBXGroup;
 			children = (
+				62536FF528D7174C0098E39C /* Model */,
 				623A03F928C697AC00816000 /* AppDelegate.swift */,
 				6230239328CE187800E8014B /* Helpers */,
 				6230239028CDE01F00E8014B /* Views */,
@@ -101,6 +104,14 @@
 				623A03FD28C697AC00816000 /* ViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		62536FF528D7174C0098E39C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				62536FF628D717660098E39C /* SearchResult.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +187,7 @@
 			files = (
 				623A040E28C6983F00816000 /* BaseTabBarController.swift in Sources */,
 				6230239B28CE1AD000E8014B /* 05_UIView+Layout.swift in Sources */,
+				62536FF728D717660098E39C /* SearchResult.swift in Sources */,
 				623A03FE28C697AC00816000 /* ViewController.swift in Sources */,
 				623A03FA28C697AC00816000 /* AppDelegate.swift in Sources */,
 				6230239D28CE1B2000E8014B /* SearchResultCell.swift in Sources */,
