@@ -8,7 +8,7 @@
 import UIKit
 import SDWebImage
 
-class AppSearchController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
+class AppSearchController: BaseListController, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
     fileprivate let cellId = "id1234"
     fileprivate let searchController = UISearchController(searchResultsController: nil)
     fileprivate let enterSearchTermLabel: UILabel = {
@@ -80,12 +80,5 @@ class AppSearchController: UICollectionViewController, UICollectionViewDelegateF
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         enterSearchTermLabel.isHidden = appResults.count != 0
         return appResults.count
-    }
-    init() {
-        super.init(collectionViewLayout: UICollectionViewFlowLayout())
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
