@@ -21,7 +21,7 @@ class Service {
                 completion([], nil)
             }
             guard let data = data else { return }
-
+            
             do {
                 let searchResult = try
                 JSONDecoder().decode(SearchResult.self, from: data)
@@ -30,8 +30,25 @@ class Service {
                 print("Failed to decode json:", jsonErr)
                 completion([], jsonErr)
             }
-
+            
         }.resume()
     }
     
+    func fetchGames(completion: @escaping (AppGroup?, Error?) -> ()) {
+        let urlstring = "https://rss.applemarketingtools.com/api/v2/us/apps/top-free/10/apps.json"
+        guard let url = URL(string: urlstring)
+        else { return }
+        URLSession.shared.dataTask(with: url) { (data, resp, err) in
+            if let err = err {
+                completion(nil, err)
+                return
+            }
+            do {
+                let appGroup = try JSONDecoder().decode(AppGroup.self, from: data!)
+                completion(appGroup, nil)
+            } catch {
+                completion(nil, error)
+            }
+        }.resume()
+    }
 }
