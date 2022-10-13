@@ -17,6 +17,8 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
         aiv.hidesWhenStopped = true
         return aiv
     }()
+    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .white
@@ -103,6 +105,13 @@ class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout
             cell.titleLabel.text = appGroups.feed.title
             cell.horizontalController.appGroup = appGroups
             cell.horizontalController.collectionView.reloadData()
+            cell.horizontalController.didSelectHandler = { [weak self]
+                feedResult in
+                let controller = AppDetailController()
+                controller.view.backgroundColor = .white
+                controller.navigationItem.title = feedResult.name
+                self?.navigationController?.pushViewController(controller, animated: true)
+            }
             
             return cell
         }
