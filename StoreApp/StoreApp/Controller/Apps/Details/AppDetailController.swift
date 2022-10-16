@@ -11,13 +11,17 @@ class AppDetailController: BaseListController, UICollectionViewDelegateFlowLayou
     
     var appId: String! {
         didSet {
-            print("Here's my appId", appId)
             let urlString = "https://itunes.apple.com/lookup?id=\(appId ?? "")"
             Service.shared.fetchGenericJSONData(urlString: urlString) { (result: SearchResult?, err) in
-                print(result?.results.first?.releaseNotes)
+                let app = result?.results.first
+                self.app = app
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
             }
         }
     }
+    var app: Result?
     
     let detailCellId = "detailCellId"
     
@@ -34,10 +38,19 @@ class AppDetailController: BaseListController, UICollectionViewDelegateFlowLayou
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: detailCellId, for: indexPath) as! AppDetailCell
+        cell.app = app
+        
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return .init(width: view.frame.width, height: 300)
+
+        let dummyCell = AppDetailCell(frame: .init(x: 0, y: 0, width: view.frame.width, height: 1000))
+        dummyCell.app = app
+        dummyCell.layoutIfNeeded()
+        
+        let estimatedSize = dummyCell.systemLayoutSizeFitting(.init(width: view.frame.width, height: 1000))
+        return .init(width: view.frame.width, height: estimatedSize.height)
     }
 }

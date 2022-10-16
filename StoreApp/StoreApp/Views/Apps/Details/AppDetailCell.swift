@@ -9,6 +9,15 @@ import UIKit
 
 class AppDetailCell: UICollectionViewCell {
     
+    var app: Result! {
+        didSet {
+            nameLabel.text = app?.trackName
+            releaseNotesLabel.text = app?.releaseNotes
+            appIconImageView.sd_setImage(with: URL(string: app?.artworkUrl100 ?? ""))
+            priceButton.setTitle(app?.formattedPrice, for: .normal)
+        }
+    }
+    
     let appIconImageView = UIImageView(cornerRadius: 16)
     let nameLabel = UILabel(text: "App Name", font: .boldSystemFont(ofSize: 24), NumberOfLines: 2)
     let priceButton = UIButton(title: "$4.99")

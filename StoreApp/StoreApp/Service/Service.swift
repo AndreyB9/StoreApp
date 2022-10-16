@@ -22,10 +22,12 @@ class Service {
         let urlString = "https://rss.applemarketingtools.com/api/v2/us/apps/top-free/10/apps.json"
         fetchAppGroup(urlString: urlString, completion: completion)
     }
+    
+    
     func fetchGames(completion: @escaping (AppGroup?, Error?) -> ()) {
         fetchAppGroup(urlString: "https://rss.applemarketingtools.com/api/v2/us/apps/top-paid/25/apps.json", completion: completion)
     }
-    
+
     func fetchAppGroup(urlString: String, completion: @escaping (AppGroup?, Error?) -> ()) {
         fetchGenericJSONData(urlString: urlString, completion: completion)
     }
