@@ -9,8 +9,8 @@ import UIKit
 
 class AppsHeaderCell: UICollectionViewCell {
     
-    let companyLabel = UILabel(text: "Facebook", font: .boldSystemFont(ofSize: 12))
-    let titileLabel = UILabel(text: "Keeping up with friends is faster than ever", font: .systemFont(ofSize: 24))
+    let companyLabel = UILabel(text: "Facebook", font: .boldSystemFont(ofSize: 12), NumberOfLines: 1)
+    let titileLabel = UILabel(text: "Keeping up with friends is faster than ever", font: .systemFont(ofSize: 24), NumberOfLines: 0)
     let imageView = UIImageView(cornerRadius: 8)
     
     
