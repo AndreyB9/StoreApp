@@ -39,6 +39,7 @@
 		626A2D2F290EFAEE00C12EC0 /* ReviewRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626A2D2E290EFAEE00C12EC0 /* ReviewRowCell.swift */; };
 		626A2D31290F06B400C12EC0 /* ReviewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626A2D30290F06B400C12EC0 /* ReviewsController.swift */; };
 		626A2D33290F0D3B00C12EC0 /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626A2D32290F0D3B00C12EC0 /* ReviewCell.swift */; };
+		6270184D29C6F2C3004CECB2 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6270184C29C6F2C3004CECB2 /* Reviews.swift */; };
 		C1773B459DF2589245FE9E31 /* Pods_StoreApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 983F9DA7424E60CDFEE2F563 /* Pods_StoreApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +80,7 @@
 		626A2D2E290EFAEE00C12EC0 /* ReviewRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRowCell.swift; sourceTree = "<group>"; };
 		626A2D30290F06B400C12EC0 /* ReviewsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsController.swift; sourceTree = "<group>"; };
 		626A2D32290F0D3B00C12EC0 /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
+		6270184C29C6F2C3004CECB2 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
 		983F9DA7424E60CDFEE2F563 /* Pods_StoreApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StoreApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -245,6 +247,7 @@
 				62536FF628D717660098E39C /* SearchResult.swift */,
 				624CF0B828E9E26D0024BFFC /* AppGroup.swift */,
 				625158EE28F2E678009BC36A /* SocialApp.swift */,
+				6270184C29C6F2C3004CECB2 /* Reviews.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				62395ED328D9031B006B222F /* Service.swift in Sources */,
 				6232399929042D05005779E1 /* PreviewCell.swift in Sources */,
 				626A2D31290F06B400C12EC0 /* ReviewsController.swift in Sources */,
+				6270184D29C6F2C3004CECB2 /* Reviews.swift in Sources */,
 				6251EE9F28E639060025EEBA /* Extensions.swift in Sources */,
 				6230239D28CE1B2000E8014B /* SearchResultCell.swift in Sources */,
 				623AA1B128C933AF00D5FA46 /* AppSearchController.swift in Sources */,
