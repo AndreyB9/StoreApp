@@ -38,6 +38,8 @@
 		6251EE9F28E639060025EEBA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6251EE9E28E639060025EEBA /* Extensions.swift */; };
 		62536FF428D5F5A90098E39C /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62536FF328D5F5A90098E39C /* VerticalStackView.swift */; };
 		62536FF728D717660098E39C /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62536FF628D717660098E39C /* SearchResult.swift */; };
+		6253D62D29C8552300E46111 /* AppFullScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6253D62C29C8552300E46111 /* AppFullScreenController.swift */; };
+		6253D62F29C859F000E46111 /* AppFullScreenDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6253D62E29C859F000E46111 /* AppFullScreenDescriptionCell.swift */; };
 		626A2D2F290EFAEE00C12EC0 /* ReviewRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626A2D2E290EFAEE00C12EC0 /* ReviewRowCell.swift */; };
 		626A2D31290F06B400C12EC0 /* ReviewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626A2D30290F06B400C12EC0 /* ReviewsController.swift */; };
 		626A2D33290F0D3B00C12EC0 /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626A2D32290F0D3B00C12EC0 /* ReviewCell.swift */; };
@@ -81,6 +83,8 @@
 		6251EE9E28E639060025EEBA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		62536FF328D5F5A90098E39C /* VerticalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
 		62536FF628D717660098E39C /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		6253D62C29C8552300E46111 /* AppFullScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFullScreenController.swift; sourceTree = "<group>"; };
+		6253D62E29C859F000E46111 /* AppFullScreenDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFullScreenDescriptionCell.swift; sourceTree = "<group>"; };
 		626A2D2E290EFAEE00C12EC0 /* ReviewRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRowCell.swift; sourceTree = "<group>"; };
 		626A2D30290F06B400C12EC0 /* ReviewsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsController.swift; sourceTree = "<group>"; };
 		626A2D32290F0D3B00C12EC0 /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
@@ -150,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				622E41B229C83147004B5AE3 /* TodayController.swift */,
+				6253D62C29C8552300E46111 /* AppFullScreenController.swift */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				622E41B529C83362004B5AE3 /* TodayCell.swift */,
+				6253D62E29C859F000E46111 /* AppFullScreenDescriptionCell.swift */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -400,6 +406,7 @@
 				623A03FE28C697AC00816000 /* ViewController.swift in Sources */,
 				622BDC7928E25E340018067A /* BaseListController.swift in Sources */,
 				626A2D2F290EFAEE00C12EC0 /* ReviewRowCell.swift in Sources */,
+				6253D62F29C859F000E46111 /* AppFullScreenDescriptionCell.swift in Sources */,
 				622E41B629C83362004B5AE3 /* TodayCell.swift in Sources */,
 				6251EE9D28E638240025EEBA /* AppRowCell.swift in Sources */,
 				623B00C728FB47F0008164F0 /* AppDetailCell.swift in Sources */,
@@ -411,6 +418,7 @@
 				62395ED328D9031B006B222F /* Service.swift in Sources */,
 				6232399929042D05005779E1 /* PreviewCell.swift in Sources */,
 				626A2D31290F06B400C12EC0 /* ReviewsController.swift in Sources */,
+				6253D62D29C8552300E46111 /* AppFullScreenController.swift in Sources */,
 				6270184D29C6F2C3004CECB2 /* Reviews.swift in Sources */,
 				622E41B329C83147004B5AE3 /* TodayController.swift in Sources */,
 				6251EE9F28E639060025EEBA /* Extensions.swift in Sources */,

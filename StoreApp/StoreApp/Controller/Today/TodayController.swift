@@ -10,47 +10,66 @@ import UIKit
 class TodayController: BaseListController, UICollectionViewDelegateFlowLayout {
     
     fileprivate let cellId = "cellId"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         navigationController?.isNavigationBarHidden = true
-        collectionView.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        
+        collectionView.backgroundColor = #colorLiteral(red: 0.948936522, green: 0.9490727782, blue: 0.9489068389, alpha: 1)
         
         collectionView.register(TodayCell.self, forCellWithReuseIdentifier: cellId)
     }
     
+    var appFullscreenController: UIViewController!
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath)
         
-        let redView = UIView()
-        redView.backgroundColor = .red
+        let appFullscreenController = AppFullscreenController()
+        let redView = appFullscreenController.view!
         redView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleRemoveRedView)))
         view.addSubview(redView)
         
+        addChild(appFullscreenController)
+        
+        self.appFullscreenController = appFullscreenController
+        
         guard let cell = collectionView.cellForItem(at: indexPath) else { return }
-        guard let startingFrame = cell.superview?.convert(cell.frame, to: nil) else {return}
+        
+        
+        guard let startingFrame = cell.superview?.convert(cell.frame, to: nil) else { return }
         
         self.startingFrame = startingFrame
-        
         redView.frame = startingFrame
         redView.layer.cornerRadius = 16
         
+        
+        
         UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: .curveEaseOut, animations: {
             redView.frame = self.view.frame
+            
+            self.tabBarController?.tabBar.transform = CGAffineTransform(translationX: 0, y: 150)
+            
         }, completion: nil)
     }
+    
     var startingFrame: CGRect?
     
-    @objc func handleRemoveRedView(gesture: UITapGestureRecognizer ) {
-       // gesture.view?.removeFromSuperview()
+    @objc func handleRemoveRedView(gesture: UITapGestureRecognizer) {
         UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: .curveEaseOut, animations: {
+            
             gesture.view?.frame = self.startingFrame ?? .zero
-        }, completion: { _ in gesture.view?.removeFromSuperview()})
+            
+            self.tabBarController?.tabBar.transform = .identity
+            
+        }, completion: { _ in
+            gesture.view?.removeFromSuperview()
+            self.appFullscreenController.removeFromParent()
+        })
     }
     
-    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        4
+        return 4
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -69,6 +88,6 @@ class TodayController: BaseListController, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return .init(top: 32, left: 0, bottom: 32, right: 0)
     }
+    
 }
-
 
