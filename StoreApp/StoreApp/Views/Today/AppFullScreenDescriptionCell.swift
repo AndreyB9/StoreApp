@@ -28,7 +28,6 @@ class AppFullscreenDescriptionCell: UITableViewCell {
         label.attributedText = attributedText
         label.numberOfLines = 0
         
-        
         return label
     }()
     
