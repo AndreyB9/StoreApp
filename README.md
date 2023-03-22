@@ -1,6 +1,10 @@
 # StoreApp
-![Uploading Simulator Screen Recording - iPhone 14 Pro - 2023-03-22 at 15.21.01.gif…]()
-![Simulator-Screen-Recording-iPhone-14-Pro-2023-03-22-at-15 18 33](https://user-images.githubusercontent.com/109412391/226905494-b901c03f-6f65-4252-9eb6-8fe4747a6aa8.gif)
-<p align="center">
-  ![Simulator-Screen-Recording-iPhone-14-Pro-2023-03-22-at-15 18 33](https://user-images.githubusercontent.com/109412391/226905494-b901c03f-6f65-4252-9eb6-8fe4747a6aa8.gif)
+
+There's just my test project. I made that for deep understanding Autolayout and UICollectionView :)
+##
+<p float="left">
+  <img src="/https://user-images.githubusercontent.com/109412391/226910763-d2d2ed9a-5355-4ead-bce4-933d325a1efa.gif" width="100" />
+  <img src="/img2.png" width="100" /> 
+  <img src="/img3.png" width="100" />
 </p>
+![Simulator Screen Recording - iPhone 14 Pro - 2023-03-22 at 15 21 01](https://user-images.githubusercontent.com/109412391/226910763-d2d2ed9a-5355-4ead-bce4-933d325a1efa.gif)
