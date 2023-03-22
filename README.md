@@ -1,6 +1,6 @@
 # StoreApp
 
-There's just my test project. I made that for deep understanding Autolayout and UICollectionView :)
+
 ##
 <p float="left">
   <img src="https://im.ezgif.com/tmp/ezgif-1-e5940df283.gif" />
