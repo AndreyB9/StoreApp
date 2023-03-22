@@ -7,4 +7,3 @@ There's just my test project. I made that for deep understanding Autolayout and 
   <img src="https://im.ezgif.com/tmp/ezgif-1-c67ced8ec4.gif" />
   <img src="https://im.ezgif.com/tmp/ezgif-1-c705a50994.gif" /> 
 </p>
-
